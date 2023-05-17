@@ -87,4 +87,11 @@ hooks = [
     'condition': 'host_os != "aix"',
     'action': ['python', 'tools/clang/scripts/update.py'],
   },
+  {
+    # Update LASTCHANGE.
+    'name': 'lastchange',
+    'pattern': '.',
+    'action': ['python', 'build/util/lastchange.py',
+               '-o', 'build/util/LASTCHANGE'],
+  },
 ]
